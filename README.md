@@ -15,6 +15,21 @@ Las plantillas viven en [`global/`](global/):
 | [`MEMORY.md`](global/MEMORY.md) | **Índice de memoria viva.** Apunta a archivos `feedback_*` / `project_*` / `reference_*` con cosas aprendidas durante el trabajo. Opcional. | Raíz del proyecto |
 | [`DESIGN.md`](global/DESIGN.md) | **Sistema de diseño del proyecto.** Tokens, lenguaje visual, componentes. Opcional, recomendable si el proyecto tiene UI con sistema propio. | Raíz del proyecto |
 
+## Guías de estilo (ejemplo)
+
+Junto a las plantillas, el repo incluye [`guia-estilo.md`](guia-estilo.md) — mi guía personal de estilo de escritura (voz, ritmo, reglas concretas anti-IA). No es plantilla: es la guía real que cargo como contexto cuando trabajo en tareas de texto.
+
+Está aquí como **ejemplo de cómo rellenar la sección "Estilo de escritura" del `CLAUDE.md` global**. Si tienes una propia, sustitúyela. Si no, parte de ésta y adáptala.
+
+Referencia desde tu `CLAUDE.md` global con ruta absoluta:
+
+```markdown
+## Estilo de escritura
+
+- 📖 **Estilo Base**: `/ruta/al/repo/guia-estilo.md`
+  Voz, ritmo, filosofía, léxico. Para cualquier formato de texto.
+```
+
 ## Filosofía
 
 - **Mapa, no biblia.** Las plantillas son índices navegables, no manuales para leer de cabo a rabo.
@@ -67,7 +82,7 @@ ln -s ../../AGENTS.md .cursor/rules/agents.mdc
 
 `AGENTS.md` canónico, symlinks para los demás agentes.
 
-Cursor no auto-carga AGENTS.md; lee reglas desde .cursor/rules/*.mdc (o un .cursorrules legacy en la raíz). El symlink anterior expone el mismo contenido sin duplicarlo.s
+> Cursor no auto-carga AGENTS.md; lee reglas desde .cursor/rules/*.mdc (o un .cursorrules legacy en la raíz). El symlink anterior expone el mismo contenido sin duplicarlo.
 
 **Modo C — Patrón oficial Anthropic con import:**
 
